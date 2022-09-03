@@ -1,0 +1,102 @@
+@use '../abstracts/variables' as *;
+
+/* //////////////////////
+  Article snippets
+  /////////////////////// */
+
+.snippet {
+    display: grid;
+    gap: 1em;
+    grid-template-areas:
+      "image"
+      "title"
+      "meta"
+      "body"
+      "button";
+  
+    &__image {
+      grid-area: image;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+    &__title {
+      grid-area: title;
+      color: $clr-neutral-900;
+      font-size: $fs-500;
+  
+      a {
+        color: inherit;
+        text-decoration: none;
+      
+        &:hover,
+        &:focus {
+          color: $clr-primary-500;
+        } 
+      }
+    }
+    &__meta {
+      grid-area: meta;
+      color: $clr-neutral-300;
+  
+      span {
+        color: $clr-neutral-900;
+      }
+    }
+  }
+  
+  @media (min-width: 45em) {
+    .snippet {
+      grid-template-areas:
+        "title image"
+        "meta image"
+        "body image"
+        "button image";
+      grid-column-gap: 4em;
+      grid-template-columns: 1fr 40%;
+      grid-template-rows: min-content min-content min-content 1fr;
+    }
+  }
+  
+  .btn {
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+    padding: 0.75em 1.75em;
+    border-radius: 0.25em;
+    align-self: start;
+    justify-self: start;
+    
+    &:focus {
+      outline: 0.125em solid $clr-primary-400;
+      outline-offset: 0.25em;
+    }
+  
+    &--primary {
+      background: $clr-primary-400;
+      color: $clr-neutral-100;
+      font-weight: $fw-700;
+      border: 2px solid $clr-primary-400;
+  
+      &:hover,
+      &:focus {
+        background: $clr-primary-500;
+        border-color: $clr-primary-500; 
+      }
+    }
+  
+    &--neutral {
+      background-color: $clr-neutral-100;
+      color: $clr-neutral-900;
+      font-weight: $fw-700;
+      border: 2px solid $clr-neutral-900;
+  
+      &:hover,
+      &:focus {
+        color: $clr-neutral-100;
+        background-color: $clr-neutral-900;
+      }
+    }
+  
+  }

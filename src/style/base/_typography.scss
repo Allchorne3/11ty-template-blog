@@ -1,0 +1,16 @@
+@use '../abstracts/variables' as *;
+
+/* typgraphy */
+
+.article-title,
+.section-title {
+  color: $clr-primary-500;
+}
+
+.article-title {
+  font-size: $fs-700;
+}
+
+.section-title {
+  font-size: $fs-600;
+}

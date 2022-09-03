@@ -1,0 +1,28 @@
+@use '../abstracts/variables' as *;
+
+/* //////////////////////
+  General styling
+  /////////////////////// */
+
+  body {
+    font-family: $ff-body;
+    font-size: $fs-400;
+    color: $clr-neutral-900;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    font-family: $ff-heading;
+    font-weight: $fw-900;
+    line-height: 1.1;
+  }
+  
+  strong {
+    font-weight: $fw-700;
+  }
+  
+  section,
+  .section {
+    padding: min(10vh, 10em) 0;
+  }
