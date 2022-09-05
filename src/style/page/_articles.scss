@@ -7,9 +7,78 @@
 .main-article {
     margin-bottom: 3rem;
 
-    &__figure figcaption {
-        margin: 1rem 0;
-        font-size: $fs-300;
-        opacity: .9;
+    .container {
+      padding-top: 7rem;
+
+      h1 { 
+        font-size: 7rem;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      h5 {
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 0;
+      }
+
+      time {
+        display: block;
+        font-style: italic;
+        font-weight: $fw-400;
+        text-align: center;
+        font-family: $ff-heading;
+        margin-bottom: 6rem;
+      }
+
+      .content {
+
+        h2 {
+          font-weight: $fw-700;
+        }
+        
+        h2, p {
+          margin: 0 auto 1.3rem;
+          max-width: calc(100% - 16rem);
+        }
+
+        p + h2 {
+          margin-top: 3rem;
+        }
+
+        // p:first-of-type:first-letter {
+        //     font-size: 6rem;
+        //     margin-right: 1rem;
+        //     float: left;
+        //     line-height: 1;
+        //     font-weight: $fw-900;
+        // }
+
+        p:first-child:first-letter {
+          font-weight: 900;
+          font-size: 6rem;
+          float: left;
+          line-height: .8;
+          margin-right: 15px;
+          position: relative;
+          text-transform: uppercase;
+          vertical-align: center;
+      }
+
+        blockquote {
+          font-size: 2rem;
+          font-style: italic;
+          margin: 3rem 1rem;
+          text-align: center;
+        }
+
+        figure {
+          img {
+            margin: 2.5rem 0;
+          }
+        }
+
+      }
+
     }
 }
