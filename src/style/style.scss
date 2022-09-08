@@ -10,6 +10,7 @@
 @use 'sections/footer';
 
 @use 'page/home';
-@use 'page/articles';
+
+@use 'layouts/articles';
 
 @use 'components/scroll-progress'
