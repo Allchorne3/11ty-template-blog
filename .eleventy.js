@@ -53,7 +53,9 @@ module.exports = function(eleventyConfig) {
           })
         }
         return content
-    })    
+    })
+
+    eleventyConfig.addGlobalData("rootURL", "https://www.raymondcamden.com");
 
     return {
         htmlTemplateEngine: 'njk',
