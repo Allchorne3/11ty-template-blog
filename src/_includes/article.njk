@@ -7,7 +7,7 @@ layout: base.njk
     
       <h1 class="article-title">{{ title }}</h1>
       <h5>Written by {{author}}</h5>
-      <time>{{ date | postDate }} - {{ content | emojiReadTime }}</time>
+      <time>{{ date | prettyDate }} - {{ content | emojiReadTime }}</time>
 
       <div class="content">
         {{ content | safe }}
