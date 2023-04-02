@@ -24,19 +24,6 @@
         </main>
         {% include 'footer.njk' %}
 
-        {# Used for Netlify CMS to redirect to the admin page #}
-        <script>
-            if (window.netlifyIdentity) {
-                window.netlifyIdentity.on("init", user => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                    document.location.href = "/admin/";
-                    });
-                }
-                });
-            }
-        </script>
-        <script src="/scripts/app.js"></script>
-
+        <script src="./scripts/app.js"></script>
     </body>
 </html>
