@@ -41,7 +41,12 @@ module.exports = function(eleventyConfig) {
         return content
     })
 
-    eleventyConfig.addGlobalData("rootURL", "ENTER_URL");
+    eleventyConfig.addGlobalData('site', {
+        name: 'Your Site Name',
+        host: 'https://yoursitename.com',
+        slogan: 'Your global site slogan',
+        description: "your default site description"
+      });
 
     return {
         htmlTemplateEngine: 'njk',

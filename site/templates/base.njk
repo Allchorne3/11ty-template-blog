@@ -4,19 +4,17 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">     
-        <title>{{title}}</title>
+        <title>{% include "uniqueTitle.njk" %}</title>
 
-        <meta property="og:title" content="{{ title if title else 'TITLE GOES HERE'}}" />
-        <meta property="og:type" content="{{ 'article' if tags == 'post' else 'website' }}" />
-        <meta property="og:image" content="ENTER URL HERE{% if image %}{{ image }}{% else %}fish{% endif %}" />
-        <meta property="og:url" content="ENTER URL HERE{{ page.url }}" />
-        <meta property="og:description" content="{{ description if description else 'DEFAULT DESCRIPTION HERE!' }}" />
-        <meta property="og:site_name" content="ENTER SITE NAME" />
+        {% include "social.njk" %}
+
+        {% if noindex %}
+        <meta name="robots" content="noindex" />
+        {% endif %}
 
         <link rel="stylesheet" href="{{ '/style/style.css' | url }}">
-        <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
-    <body class="page-{% if page.fileSlug %}{{ page.fileSlug }}{% else %}home{% endif %}">
+    <body>
 
         {% include 'header.njk' %}
         <main>
