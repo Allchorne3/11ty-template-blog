@@ -24,6 +24,9 @@
   "homepage": "https://github.com/Allchorne3/11ty-nunjucks#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
     "autoprefixer": "^10.4.8",
     "concurrently": "^7.6.0",
     "cross-env": "^7.0.3",
