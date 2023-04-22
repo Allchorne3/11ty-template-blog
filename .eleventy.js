@@ -43,10 +43,12 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addGlobalData('site', {
         name: 'Your Site Name',
-        host: 'https://yoursitename.com',
+        url: 'https://yoursitename.com',
+        host: process.env.NODE_ENV === 'production' ? 'https://gearset.com' : 'http://localhost:8080',
         slogan: 'Your global site slogan',
         description: "your default site description"
-      });
+    });
+     
 
     return {
         htmlTemplateEngine: 'njk',
