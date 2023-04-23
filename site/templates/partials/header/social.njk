@@ -1,4 +1,4 @@
-<meta name="og:title" content="{% include 'uniqueTitle.njk' %}" />
+<meta name="og:title" content="{% include 'header/uniqueTitle.njk' %}" />
 <meta name="og:type" content="{{ 'article' if tags == 'post' else 'website' }}" />
 <meta name="og:url" content="{{ site.host }}{{ page.url }}" />
 <meta name="og:description" content="{{ description if description else site.description }}" />
@@ -6,7 +6,7 @@
 
 <meta name="twitter:site" content="@TWITTERHANDLE"/>
 <meta name="twitter:creator" content="@TWITTERHANDLE"/>
-<meta name="twitter:title" content="{% include 'uniqueTitle.njk' %}"/>
+<meta name="twitter:title" content="{% include 'header/uniqueTitle.njk' %}"/>
 <meta name="twitter:description" content="{{ description if description else site.description }}"/>
 
 {% if twitterImage %}    

@@ -5,6 +5,10 @@ title: Blog
 
 <div class="section container">
   <h1 class="section-title">Recent articles</h1>
+  
+  {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% endif %}
+  {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% endif %}
+
   <ul role="list" class="articles__list flow">
     {%- for post in collections.post | reverse-%}
       {% include 'article-snippet.njk' %}
