@@ -11,13 +11,15 @@
        <nav>
         <ul role="list" class="nav-list flex-group">
           <li>
-            <a {% if currentUrl === '/' %}aria-current="page"{% endif %} href="/">Home</a>
+            <a {% if page.fileSlug === '' %}aria-current="page"{% endif %} href="/">
+              Home
+            </a>
           </li>
           <li>
-            <a {% if currentUrl === '/blog' %}aria-current="page"{% endif %} href="/blog/">Blog</a>
+            <a {% if page.fileSlug === 'blog' %}aria-current="page"{% endif %} href="/blog/">Blog</a>
           </li>
           <li>
-            <a {% if currentUrl === '/about' %}aria-current="page"{% endif %} href="/about/">About</a>
+            <a {% if page.fileSlug === 'about' %}aria-current="page"{% endif %} href="/about/">About</a>
           </li>
         </ul>
       </nav>
